@@ -1,5 +1,5 @@
 Have you ever given up on upgrading an npm package?
-Maybe the API was so vastly different in the new version that upgrading felt ...
+Maybe the API was so vastly different in the new version that upgrading felt intractable.
 Or maybe the changelog was incomplete or full of errors making it difficult to make the required changes.
 At Coana, we certainly have struggled with dependency upgrades countless times.
 Upgrading dependencies can be a cumbersome process, and for good reasons:
@@ -45,11 +45,11 @@ Try this example yourself in our [playground](https://jsfix.live/playground)
 
 ***
 
-### Is it just another AST transformer?
+### Is JSFIX just another AST transformer?
 The short answer is *no*, JSFIX is mostly semantics-based wheres most classic AST transformers (such as [jscodeshift](https://github.com/facebook/jscodeshift)) are syntax-based.  
 In less academic terms:
 
-> where most other tools primarily consider *how your code looks*, JSFIX also considers *what your code does*. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **where most other tools primarily consider *how your code looks*, JSFIX also considers *what your code does*.**
 
 So what does all that mean in practice? Let's go back to the example above.
 We can easily write a jscodeshift patch making the same transformation on the example above.
@@ -58,7 +58,7 @@ Such a patch works well if you know that `l` and only `l` contains the lodash mo
 If in another file, you load lodash into a variable named `lodash` (`var lodash = require('lodash')`), then you have to extend the jscodeshift patch to handle that case as well.
 Even worse, consider what would happen if you try to make the patch general enough to handle every application using lodash out there: There may be hundreds or even thousands of different variables holding the lodash module object. 
 We could try to simplify the patch to look for calls to a method called `reduce` taking 4 arguments (no constraint on the receiver/base object), but then we have to pray that no application calls another `reduce` method with 4 arguments - clearly, an unrealistic assumption.
-You can probably already see that making the patch general enough to handle all cases is intractable.
+You can probably already see that making the patch general enough to handle all cases is practically possible.
 In general: 
 
 > jscodeshift works well when code follows strict conventions, but fall short otherwise.
