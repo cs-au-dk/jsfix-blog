@@ -8,7 +8,6 @@ Upgrading dependencies can be a cumbersome process, and for good reasons:
 Some package developers provide [comprehensive migration guides](https://v6.rxjs.dev/guide/v6/migration) with step-by-step guides to upgrading while [others](https://github.com/graphql/graphql-js/blob/main/resources/gen-changelog.js) auto-generate changelogs from the list of accepted pull requests since the last release.
 
 - **Changelogs are often incomplete or missing details**.
-<a name="lodash-example"></a>
 For example, the [Lodash version 4 changelog](https://github.com/lodash/lodash/wiki/Changelog#v400) contains *Removed thisArg params from most methods because they were largely unused, complicated implementations, & can be tackled with _.bind, Function#bind, or arrow functions* that fails to specify exactly which functions are affected (There are 64 in total). 
 
 - **Developers are short on time**.
@@ -19,7 +18,7 @@ And let's be honest, even with sufficient time, upgrading dependencies is not re
 ### Introducing JSFIX
 JSFIX is a tool that automatically migrates your npm application to use a new version of a dependency.
 Unlike tools such as [Dependabot](https://github.com/dependabot) or [Snyk](https://snyk.io/), JSFIX doesn't just modify your package.json to depend on some new version of a dependency, *it also adjusts your code to the new API of the dependency*.
-If we consider the [Example from Lodash](#lodash-example) mentioned above, JSFIX finds all calls to the 64 affected functions, and then transforms those calls to use the `bind` function.
+For the Lodash example above, JSFIX finds all calls to the 64 affected functions, and then transforms those calls to use the `bind` function.
 
 For example,
 
