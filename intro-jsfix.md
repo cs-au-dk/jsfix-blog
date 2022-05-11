@@ -37,12 +37,12 @@ function f () {
 }
 ```
 
-Try this example yourself in our [playground](https://jsfix.live/playground)
+Try this example yourself in our [playground](https://jsfix.live/playground).
 
 ***
 
 ### So how is JSFIX different from other codemod tools?
-In essence, JSFIX is mostly semantics-based wheres most classic codemod tools (such as [jscodeshift](https://github.com/facebook/jscodeshift)) are syntax-based.  
+In essence, JSFIX is mostly semantics-based whereas most classic codemod tools (such as [jscodeshift](https://github.com/facebook/jscodeshift)) are syntax-based.  
 In less academic terms:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **where most other tools primarily consider *how your code looks*, JSFIX also considers *what your code does*.**
