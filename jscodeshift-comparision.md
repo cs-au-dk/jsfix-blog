@@ -36,4 +36,5 @@ function f () {
 ```
 in other words, we want to take the fourth argument of calls to `reduce` and pass that argument to a `bind` method call we insert on the second argument.  
 A JSFIX semantic patch for performing this transformation reads:
-\$\texttt{call <lodash>.reduce [4,4]} \leadsto \texttt{$callee($1, $2.bind($4), $3)}\$.
+
+\$\texttt{call <lodash>.reduce [4,4]} \leadsto \texttt{callee(1, 2.bind(4), 3)}\$.
