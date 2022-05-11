@@ -35,7 +35,6 @@ var l = require('lodash');
 function f () {
     l.reduce([1, 2, 3], ((t, n) => t + n).bind(this), 0);
 }
-
 ```
 
 Try this example yourself in our [playground](https://jsfix.live/playground)
@@ -48,7 +47,7 @@ In less academic terms:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **where most other tools primarily consider *how your code looks*, JSFIX also considers *what your code does*.**
 
-So what does all that mean in practice? Let's go back to the example above.
+So what does this mean in practice? Let's go back to the example above.
 We can easily write a jscodeshift patch for making the transformation above.
 Informally, such a patch would read "*when calling `reduce` on the object `l` with 4 arguments, insert a call to `bind` on the second argument passing the fourth argument from the `reduce` call to the `bind` call*."
 Such a patch works well if you know that `l` and only `l` contains the Lodash module object. 
@@ -61,7 +60,7 @@ We could try to simplify the patch to look for calls to all methods named `reduc
 You can probably already see that making the patch general enough to handle all cases is practically impossible.
 In general: 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **jscodeshift works well when code follows strict conventions, but fall short otherwise.**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **jscodeshift works well when code follows strict conventions, but falls short otherwise.**
 
 Let's now consider what JSFIX does differently. 
 With JSFIX, patches are formalized using small special-purpose programs known as *semantic patches* (a term coined by [Lawall et al](https://dl.acm.org/doi/10.1145/1218063.1217942)).
