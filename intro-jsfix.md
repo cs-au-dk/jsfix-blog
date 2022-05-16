@@ -99,7 +99,7 @@ The playground will then report that *The input program is not affected by the b
 
 So how does JSFIX know which variables hold Lodash module object? 
 JSFIX uses several static programs analyses to reason about the semantics (or meaning) of the program - that is why we say that JSFIX is semantics-based.
-Exactly how these analyses work is out-of-scope for this post, but more information is provided in our [open-access research papers](http://localhost:4201/about-jsfix#research).
+Exactly how these analyses work is out-of-scope for this post, but more information is provided in our [open-access research papers](https://jsfix.live/about-jsfix#research).
 
 ***
 
