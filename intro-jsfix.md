@@ -108,6 +108,6 @@ Exactly how these analyses work is out-of-scope for this post, but more informat
 If you head over to [https://jsfix.live/dependency-scanner](https://jsfix.live/dependency-scanner) you can check if JSFIX can help you with upgrades already today.
 You can also sign up for notifications about future upgrades relevant for your application.
 
-In case you are wondering how JSFIX works on a real application, you can try the full pipeline on a Lodash client [here](http://localhost:4201/jsfix/https%253A%252F%252Fgithub.com%252Fmtorp%252Fminimongo).
+In case you are wondering how JSFIX works on a real application, you can try the full pipeline on a Lodash client [here](https://jsfix.live/jsfix/https%253A%252F%252Fgithub.com%252Fmtorp%252Fminimongo).
 
 If you have any questions or suggestions, join our [public slack channel](https://join.slack.com/t/jsfix-community/shared_invite/zt-16615g0xc-I4cwSWn9Ghdl4CqfcCz7rQ) or write an email to [contact@coana.tech](mailto:contact@coana.tech).
